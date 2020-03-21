@@ -1,19 +1,22 @@
 #pragma once
 #include <iostream>
 #include <functional>
-#include <map>
+#include <unordered_map>
 #define BAD_FUNCTION NULL
 #define BAD_RETURN 0
 
+//FunctionManager
 namespace FunctionManager
 {
 	template <class functype>
-	static std::map<std::string, std::function<functype()>> function_arr;
+	static std::unordered_map<std::string, std::function<functype()>> function_arr;
 	template <class functype>
 	bool Register(std::string strName, std::function<functype()> func, bool overwrite = true);
 	template <class functype>
 	functype Call(std::string strName);
 }
+
+//Functions
 
 template <class functype>
 bool FunctionManager::Register(std::string strName, std::function<functype()> func, bool overwrite)

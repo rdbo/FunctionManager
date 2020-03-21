@@ -1,6 +1,6 @@
 #include "fman.h"
 
-std::map<std::string, std::function<functype()>> FunctionManager::function_arr;
+std::unordered_map<std::string, std::function<functype()>> FunctionManager::function_arr;
 
 bool FunctionManager::Register(std::string strName, std::function<functype()> func, bool overwrite)
 {
