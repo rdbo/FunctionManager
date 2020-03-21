@@ -16,3 +16,10 @@
 <p>Example:</p></br>
 <p><i>FunctionManager::Register&lt;std::string>("ExampleFunc", []() -> std::string { return "hello"; }, false);</p></i>
 <p><i>FunctionManager::Call&lt;std::string>("ExampleFunc");</p></i>
+</br>
+</br>
+<p><b>3. Additional notes </p></b>
+<ul>
+  <li>To add variables into the scope of the function, put them between [ and ] on the lambda function. </br>
+  Example: int a; FunctionManager::Register<void>("Example", [&a]() -> void { std::cout << a << std::endl });
+  </li>
