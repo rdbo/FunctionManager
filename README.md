@@ -5,7 +5,7 @@
 <p><i>FunctionManager::Register("FunctionName", []() -> functype { /*function code*/ }, bOverwrite /*overwrite function with same name*/)</p></i>
 <p>OBS: bOverwrite is defined as true by default in both cases</p>
 <p>Example:</p></br>
-<p><i>FunctionManager::Register("ExampleFunc", []() -\> functype { return 1337; }, false);</p></i>
+<p><i>FunctionManager::Register("ExampleFunc", []() -> functype { return 1337; }, false);</p></i>
 <p><i>FunctionManager::Call("ExampleFunc");</p></i>
 </br>
 </br>
@@ -14,5 +14,5 @@
 <p>OBS: bOverwrite is defined as true by default in both cases</p>
 <p><i>FunctionManager::Register<type_here>("FunctionName", []() -> type_here { /*function code*/ }, bOverwrite /*overwrite function with same name*/)</p></i>
 <p>Example:</p></br>
-<p><i>FunctionManager::Register\<std::string\>("ExampleFunc", []() -> std::string { return "hello"; }, false);</p></i>
-<p><i>FunctionManager::Call\<std::string\>("ExampleFunc");</p></i>
+<p><i>FunctionManager::Register&lt;std::string>("ExampleFunc", []() -> std::string { return "hello"; }, false);</p></i>
+<p><i>FunctionManager::Call&lt;std::string>("ExampleFunc");</p></i>
