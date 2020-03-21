@@ -21,5 +21,5 @@
 <p><b>3. Additional notes </p></b>
 <ul>
   <li>To add variables into the scope of the function, put them between [ and ] on the lambda function. </br>
-  Example: int a; FunctionManager::Register<void>("Example", [&a]() -> void { std::cout << a << std::endl });
+  Example: <i>int a; FunctionManager::Register<void>("Example", [&a]() -> void { std::cout << a << std::endl });</i>
   </li>
