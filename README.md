@@ -12,7 +12,7 @@
 <p><b>2. Usage for fman.hpp</p></b>
 <p><b>The functions can have any type, everything is defined on this single file (no need of fman.cpp)</p></b>
 <p>OBS: bOverwrite is defined as true by default in both cases</p>
-<p><i>FunctionManager::Register<type_here>("FunctionName", []() -> type_here { /*function code*/ }, bOverwrite /*overwrite function with same name*/)</p></i>
+<p><i>FunctionManager::Register&lt;type_here>("FunctionName", []() -> type_here { /*function code*/ }, bOverwrite /*overwrite function with same name*/)</p></i>
 <p>Example:</p></br>
 <p><i>FunctionManager::Register&lt;std::string>("ExampleFunc", []() -> std::string { return "hello"; }, false);</p></i>
 <p><i>FunctionManager::Call&lt;std::string>("ExampleFunc");</p></i>
