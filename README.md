@@ -1,5 +1,5 @@
 # FunctionManager
-#Usage
+# Usage
 Usage for fman.h + fman.cpp
 The functions only have one type, which is <i>functype</i>, defined in fman.h
 ```C++
