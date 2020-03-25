@@ -2,13 +2,11 @@
 <h1>Usage</h1>
 <p><b>1. Usage for fman.h + fman.cpp</p></b>
 <p><b>The functions only have one type, which is <i>functype</i>, defined in fman.h</p></b>
-#
 ```C++
 FunctionManager::Register("FunctionName", []() -> functype { /*function code*/ }, bOverwrite /*overwrite function with same name*/)
 ```
 <p>OBS: bOverwrite is defined as true by default in both cases</p>
 <p>Example:</p></br>
-#
 ```C++
 FunctionManager::Register("ExampleFunc", []() -> functype { return 1337; }, false);</p></i>
 FunctionManager::Call("ExampleFunc");</p></i>
@@ -20,7 +18,6 @@ FunctionManager::Call("ExampleFunc");</p></i>
 <p>OBS: bOverwrite is defined as true by default in both cases</p>
 <p><i>FunctionManager::Register&lt;type_here>("FunctionName", []() -> type_here { /*function code*/ }, bOverwrite /*overwrite function with same name*/)</p></i>
 <p>Example:</p></br>
-#
 ```C++
 FunctionManager::Register&lt;std::string>("ExampleFunc", []() -> std::string { return "hello"; }, false);</p></i>
 FunctionManager::Call&lt;std::string>("ExampleFunc");</p></i>
@@ -31,8 +28,8 @@ FunctionManager::Call&lt;std::string>("ExampleFunc");</p></i>
 <ul>
   <li>To add variables into the scope of the function, put them between [ and ] on the lambda function. </br>
   Example: 
+  </li>
   ```C++
   int a = 10;
   FunctionManager::Register<void>("Example", [&a]() -> void { std::cout << a << std::endl });</i>
   ```
-  </li>
