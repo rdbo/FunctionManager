@@ -19,7 +19,7 @@ FunctionManager::Register&lt;type_here>("FunctionName", []() -> type_here { /*fu
 ```
 Example:
 ```C++
-FunctionManager::Register&lt;std::string>("ExampleFunc", []() -> std::string { return "hello"; }, false);
+FunctionManager::Register<std::string>("ExampleFunc", []() -> std::string { return "hello"; }, false);
 FunctionManager::Call&lt;std::string>("ExampleFunc");
 ```
 3. Additional notes
