@@ -26,5 +26,5 @@ FunctionManager::Call<std::string>("ExampleFunc");
 .To add variables into the scope of the function, put them between \[ and ] on the lambda function. Example: 
 ```C++
 int a = 10;
-FunctionManager::Register<void>("Example", [&a]() -> void { std::cout << a << std::endl });
+FunctionManager::Register<void>("Example", [&a]() -> void { std::cout << a << std::endl; });
 ```
